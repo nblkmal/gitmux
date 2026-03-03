@@ -1,0 +1,9 @@
+scan_paths:
+  - ~/Documents/runcloud
+exclude:
+  - node_modules
+  - vendor
+  - .git
+  - target
+  - dist
+  - build
