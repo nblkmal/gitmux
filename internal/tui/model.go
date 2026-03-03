@@ -274,18 +274,22 @@ func (m *Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 func (m *Model) View() string {
 	var s strings.Builder
 
-	// Title
-	s.WriteString(titleStyle.Render(" gitmux "))
-	s.WriteString(helpStyle.Render(" - Multi-repo Git Manager\n"))
-	s.WriteString(strings.Repeat("─", 50))
-	s.WriteString("\n")
+	// ASCII Header
+	asciiHeader := `
+ _____ _____ ________  ____   ___   __
+|  __ \_   _|_   _|  \/  | | | \ \ / /
+| |  \/ | |   | | | .  . | | | |\ V /
+| | __  | |   | | | |\/| | | | |/   \
+| |_\ \_| |_  | | | |  | | |_| / /^\ \
+ \____/\___/  \_/ \_|  |_/\___/\/   \/
+                                       by nblkmal
+`
+	s.WriteString(titleStyle.Render(asciiHeader))
 
 	// Scan path
 	if m.scanPath != "" {
 		s.WriteString(helpStyle.Render("Scanning: "))
 		s.WriteString(cleanStyle.Render(m.scanPath))
-		s.WriteString("\n")
-		s.WriteString(strings.Repeat("─", 50))
 		s.WriteString("\n")
 	}
 

@@ -1,5 +1,17 @@
 # gitmux - Multi-Repository Git Manager
 
+```
+ _____ _____ ________  ____   ___   __
+|  __ \_   _|_   _|  \/  | | | \ \ / /
+| |  \/ | |   | | | .  . | | | |\ V /
+| | __  | |   | | | |\/| | | | |/   \
+| |_\ \_| |_  | | | |  | | |_| / /^\ \
+ \____/\___/  \_/ \_|  |_/\___/\/   \/
+                                       Created by nblkmal
+```
+
+A terminal UI for managing multiple git repositories at once.
+
 A terminal UI for managing multiple git repositories at once. Browse, fetch, pull, and checkout branches across all your repos easily.
 
 ## Features
@@ -16,7 +28,7 @@ A terminal UI for managing multiple git repositories at once. Browse, fetch, pul
 
 ```bash
 # Clone or navigate to the project
-cd ~/Documents/runcloud/gitmux
+cd ~/gitmux
 
 # Build the binary
 go build -o gitmux ./cmd/gitmux
@@ -30,7 +42,7 @@ cp gitmux ~/bin/  # and add ~/bin to your PATH
 ### Option 2: Run directly
 
 ```bash
-cd ~/Documents/runcloud/gitmux
+cd ~/gitmux
 ./gitmux
 ```
 
@@ -131,8 +143,8 @@ Create `~/.gitmux.yaml` or `./config.yaml`:
 
 ```yaml
 scan_paths:
-  - ~/Documents/runcloud
   - ~/projects
+  - ~/workspace
 exclude:
   - node_modules
   - vendor
